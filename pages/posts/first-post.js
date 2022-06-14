@@ -1,12 +1,20 @@
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
+import header from '/style/first-post.module.css';
+import {Header, Button} from '/components/index';
 
 export default function FirstPost() {
   return(
     <>
-      <h1>First Post</h1>
+      <Head>
+        <title>Create Next Kajaa</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header />
       <h2>
+        <Button />
         <Link href="/">
-          <a>Back To Home</a>
+          <a className={header.h1}>Back To Home</a>
         </Link>
       </h2>
     </>
