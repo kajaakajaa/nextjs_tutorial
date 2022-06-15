@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import header from '/style/first-post.module.css';
+import header from '/components/first-post.module.css';
 import {Header, Button} from '/components/index';
 
 export default function FirstPost() {

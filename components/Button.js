@@ -1,4 +1,4 @@
-import button from '/style/Button.module.css';
+import button from '/components/Button.module.css';
 
 export const Button = ()=> {
   function push() {
