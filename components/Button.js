@@ -1,4 +1,3 @@
-import {useEffect} from 'react';
 import button from '/style/Button.module.css';
 
 export const Button = ()=> {
