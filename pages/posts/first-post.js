@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import header from '/components/first-post.module.css';
+//↓エントリーポイント
 import {Header, Button} from '/components/index';
 
 export default function FirstPost() {
