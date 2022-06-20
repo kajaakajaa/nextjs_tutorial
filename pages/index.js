@@ -15,12 +15,19 @@ export default function Home({allPostsData}) {
     <section>
       <h2>Blog</h2>
       <Link href="/posts/first-post"><a>fitst-postへ</a></Link>
-      <p>{allPostsData[0].id}</p>
       <ul>
-        {allPostsData.forEach((index, value)=> {
-          <li>
-            {console.log(index)}
-          </li>
+        {allPostsData.map((index, value)=> {
+          return(
+            <li>
+              <Link href={`../../posts/${encodeURIComponent(index.id)}`}><a>{index.id}</a></Link>
+              <br />
+              {index.title}
+              <br />
+              {index.date}
+              <br />
+              {index.age}
+            </li>
+          )
         })}
       </ul>
     </section>
