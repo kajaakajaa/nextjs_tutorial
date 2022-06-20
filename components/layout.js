@@ -1,9 +1,5 @@
-import Layout from '../components/layout'
-
-export default function Layout({ Component, pageProps }) {
+export default function Layout({children}) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <div>{children}</div>
   )
 }
