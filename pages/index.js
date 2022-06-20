@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
 
@@ -16,18 +15,13 @@ export default function Home({allPostsData}) {
     <section>
       <h2>Blog</h2>
       <Link href="/posts/first-post"><a>fitst-postへ</a></Link>
+      <p>{allPostsData[0].id}</p>
       <ul>
-        {allPostsData.map(({ id, date, title, age }) => (
+        {allPostsData.forEach((index, value)=> {
           <li>
-            {title}
-            <br />
-            {id}
-            <br />
-            {date}
-            <br />
-            {age}
+            {console.log(index)}
           </li>
-        ))}
+        })}
       </ul>
     </section>
   )
