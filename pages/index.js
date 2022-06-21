@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import { getSortedPostsData } from '../lib/posts';
+import Link from 'next/link'
+import { getSortedPostsData } from '../lib/posts'
+import Date from '../components/date'
 
 export async function getServerSideProps() {
   const allPostsData = getSortedPostsData();
@@ -25,7 +26,7 @@ export default function Home({allPostsData}) {
               <br />
               {index.date}
               <br />
-              {index.age}
+              <Date dateString={index.date} />
             </li>
           )
         })}
