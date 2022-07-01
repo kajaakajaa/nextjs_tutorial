@@ -19,6 +19,7 @@ export default function Post({ postData }) {
   );
 }
 
+//取得するファイルのパスからファイル名を"id"として取得する関数 → idのパスの取得
 export async function getStaticPaths() {
   const paths = getAllPostIds()
   return {
@@ -26,7 +27,7 @@ export async function getStaticPaths() {
     fallback: false
   }
 }
-
+//解析したファイルを読み込んでいる(ハッシュ形式のデータのみを抽出している) → idの内容の取得
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id)
   return {
